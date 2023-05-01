@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+html, body {
+  font-family: 'Courier New', Courier, monospace;
+  height: 100%;
+  background-color: lavender;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.myCalc {
+  width: 413px;
+  height: 498px;
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#display {
+  width: 405px;
+  height: 78px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.operators-struct {
+  height: 409px;
+  width: 405px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0px;
+  align-content: stretch;
+  margin: 5px;
 }
+
+.horizontal-growth {
+  width: 202px;
+}
+
+.vertical-growth {
+  width: 101px;
+}
+
+
+button {
+  color: white;
+  font-weight: 600;
+  font-size: 25px;
+  height: 81px;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+button:hover {
+  color: black;
+  transform: scale(1.024);
+  border-color: white;
+}
+
+.AC {
+  background-color: crimson;
+}
+
+.operator {
+  background-color: darkgrey;
+}
+
+.num {
+  background-color: dimgrey;
+}
+
+.equals-sign {
+  background-color: darkblue;
+}
+
+
+.item {
+  width: 101px;
+}
+
+
