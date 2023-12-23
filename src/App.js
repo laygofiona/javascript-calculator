@@ -191,7 +191,7 @@ const App = () => {
   
   return (
     <div className='d-flex justify-content-center align-items-center' style={{height: '100vh'}}>
-      <div id="myCalculator" className="myCalc">
+      <div id="myCalculator" className="myCalc rounded">
         <Display inputDisplay={display}/>
         <Operators setInitialInputFunc={setInitialInput} setDisplayFunc={setDisplay} initialInputVar={initialInput} isInitializedVar={isInitialized} setisInitializedFunc={setisInitialized} displayVar={display}/>
       </div>
