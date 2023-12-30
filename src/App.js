@@ -1,12 +1,12 @@
-import './App.css';
+import './index.css';
 import React, { useState, useEffect } from 'react';
 import * as math from 'mathjs';
 
 
 const Display = (props) => {
   return (
-    <div id="display" className='position-relative'>
-        <h4  className='position-absolute bottom-0 end-0'>{props.inputDisplay}</h4>
+    <div id="display" className='display-size position-relative'>
+        <h4  className='position-absolute bottom-0 end-0 m-2'>{props.inputDisplay}</h4>
     </div>
   )
 }
@@ -55,7 +55,7 @@ const Operators = (props) => {
   
   
   return  (
-    <div id="operators" className='operators-struct'>
+    <div id="operators" className='operators-struct operators-struct-size bg-white'>
         <button onClick={intialize()} id="clear" className='horizontal-growth AC'><span>AC</span></button>
         <button onClick={changeInput('/')} id="divide" className='item operator'><span>/</span></button>
         <button onClick={changeInput('*')} id="multiply" className='item operator'><span>x</span></button>
@@ -190,10 +190,12 @@ const App = () => {
   }, [initialInput])
   
   return (
-    <div className='d-flex justify-content-center align-items-center' style={{height: '100vh'}}>
-      <div id="myCalculator" className="myCalc rounded">
+    <div className='outer'>
+      <div className='d-flex justify-content-center align-items-center container-outer '>
+      <div id="myCalculator" className="myCalc myCalc-size rounded">
         <Display inputDisplay={display}/>
         <Operators setInitialInputFunc={setInitialInput} setDisplayFunc={setDisplay} initialInputVar={initialInput} isInitializedVar={isInitialized} setisInitializedFunc={setisInitialized} displayVar={display}/>
+      </div>
       </div>
     </div>
   );

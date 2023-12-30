@@ -1,3 +1,126 @@
-body {
-  margin: 0;
+html, body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: lavender;
+}
+
+.outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.myCalc {
+  min-width: 25.813rem;
+  min-height: 31.125rem;
+  background-color: black;
+  color: white;
+  margin: 20px;
+}
+
+#display {
+  min-width: 25.313rem;
+  min-height: 4.875rem;
+}
+
+.operators-struct {
+  height: 409px;
+  width: 405px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0px;
+  align-content: stretch;
+  margin: 5px;
+}
+
+
+.horizontal-growth {
+  width: 202px;
+}
+
+.vertical-growth {
+  width: 101px;
+}
+
+
+button {
+  color: white;
+  font-weight: 600;
+  font-size: 25px;
+  height: 81px;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+button:hover {
+  color: black;
+  transform: scale(1.024);
+  border-color: white;
+}
+
+.AC {
+  background-color: crimson;
+}
+
+.operator {
+  background-color: darkgrey;
+}
+
+.num {
+  background-color: dimgrey;
+}
+
+.equals-sign {
+  background-color: darkblue;
+}
+
+
+.item {
+  width: 101px;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 430px) {
+  .myCalc {
+    min-width: 12.5rem /*200px*/;
+    min-height: 31.125rem;
+    background-color: black;
+    color: white;
+    margin: 20px;
+  }
+  
+  #display {
+    min-width: 100px;
+    min-height: 4.875rem;
+  }
+
+  .operators-struct {
+    max-height: 28rem;
+    max-width: 12.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0px;
+    align-content: stretch;
+    margin: 5px;
+  }
+
+  .horizontal-growth {
+    max-width: 6.25rem /* 100px */;
+    max-height: 5.6rem;
+  }
+  
+  .vertical-growth {
+    width: 3.125rem /* 50px */;
+    max-height: 5.6rem;
+  }
+  
+  .item {
+    width: 3.125rem /* 50px */;
+    max-height: 5.6rem;
+  }
+
+  .container-outer {
+    min-width: 15rem /* 240px */;
+  }
 }
